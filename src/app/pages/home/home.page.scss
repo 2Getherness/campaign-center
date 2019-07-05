@@ -1,0 +1,39 @@
+ion-content {
+    ion-list {
+        border-radius: 0 0 10px 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+
+    }
+    #home-title {
+        font-weight: bold;
+        color: rgb(2, 0, 0);
+        font-family: sans-serif-smallcaps
+    }
+    
+    .my-custom-menu {
+        --width: 500px;
+    }
+    
+    #links {
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif
+    }
+    // #ionItem {
+    //     border-radius: 10px;
+    //     background-color: rgb(176, 195, 196)
+    // }
+    .hiddenContainer {
+        width: 60%; 
+        height: 70%;
+        background-color: rgb(141, 144, 145);
+        position: fixed;
+        top: 10%;
+        right: 0;
+        z-index: 1;
+        #ion-item{
+            background: transparent
+        }
+    }
+}

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar [color]="toolBarBackgroundColor">
+    <ion-buttons slot="start" autoHide="false">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title no-border id="menu">Campaing center</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-button (click)="menuClicked()" autoHide="false"></ion-menu-button>
+    </ion-buttons> 
+
+
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <!-- <ion-list>
+    <ion-item *ngFor="let c of components" [routerLink]="c.redirectTo" detail>
+      <ion-icon slot="start" [name]="c.icon"></ion-icon>
+      <ion-label >{{ c.companyName }}</ion-label>
+    </ion-item>
+  </ion-list> -->
+  <ion-list >
+    <ion-item [color]="toolBarBackgroundColor" margin id="ionItem" lines="none" *ngFor="let c of components" detail>
+        <ion-icon slot="start" [color]="purple" ios="ios-arrow-round-forward" md="md-arrow-round-forward"></ion-icon>
+      <a id="links" style="color: purple; width: 100%" href="{{c.weburl}}"><ion-label>{{ c.companyName }}</ion-label></a>
+    </ion-item>
+  </ion-list>
+
+  <ion-content *ngIf="showSlideView" style="border-radius: 10px 0 0 10px" [color]="toolBarBackgroundColor">
+    <ion-list class="hiddenContainer">
+      <ion-item *ngFor="let c of components" [routerLink]="c.redirectTo">
+          <ion-label >{{ c.name }}</ion-label>
+        </ion-item>
+      </ion-list>
+  </ion-content>
+  <!-- <ion-button routerLink="/about">About</ion-button>
+  <ion-button routerLink="/settings">Settings</ion-button> -->
+  <!-- <ion-list>
+    <ion-item-sliding *ngFor="let country of countries">
+      <ion-item>
+        <ion-card>
+          <img [src]="urlImg" (click)="show()" />
+          <ion-fab right bottom>
+            <button ion-fab (click)="edit()">
+              <ion-icon name="brush"></ion-icon>
+            </button>
+          </ion-fab>
+          <div class="card-title">Amsterdam</div>
+
+        </ion-card>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list> -->
+
+</ion-content>
